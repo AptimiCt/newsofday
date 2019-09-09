@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Новости</title>
+</head>
+    <body>
+        <div id="app">
+        <h1>Главные новости</h1>
+        <hr class="hr_list">
+            <div class="list_wrapper" @scroll="onScroll">
+                <ul class="list">
+                    <li v-for="item in news" >
+                        <div >
+                                <strong>{{ item.title }}</strong>
+                                <article class="media">
+                                    <div class="media-middle">
+                                        <figure >
+                                            <img :src="item.path_to_image" >
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <div class="content">
+                                            <p>{{ item.date }}</p>
+                                            <p class="box">{{ item.time }}. {{ item.bodytext }}</p>
+                                        </div>
+                                    </div>
+                                </article>
+                        </div>
+                        <hr class="hr_list">
+                    </li>
+                </ul>
+            </div>
+        </div>
+<!-- <script src="vue.js" ></script> -->
+<script src="vue.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
+<script src="app.js"></script>
+</body>
+</html>

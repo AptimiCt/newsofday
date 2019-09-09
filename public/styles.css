@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:400,800');
+
+body {
+    font-family: 'Muli', sans-serif;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background: #e6ecf1;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    color: #20292c;
+    text-shadow: 1px 1px 2px black, 0 0 2em rgb(0, 238, 255);
+}
+
+p {
+    line-height: 1.2;
+    margin-top: 7px;
+}
+
+#app {
+    width: 100vh;
+    margin: 30px auto;
+}
+
+.hr_list{
+    background-color: #1c3b44;
+}
+
+.list {
+    background-color:#ffffff;
+    color: #373737;
+    padding: 20px;
+    margin: 0px;
+    list-style: none;
+}
+
+.media {
+    display: flex;
+}
+
+img {
+    width: 130px;
+    margin-right: 20px;
+    margin-top: 10px
+}
+
+.list_wrapper{
+    border-radius: 10px;
+    height: 85vh;
+    width: 100vh;
+    overflow: scroll;
+    box-shadow: 0 5px 3px rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.1);
+}
+
+.box {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
